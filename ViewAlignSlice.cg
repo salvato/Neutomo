@@ -1,0 +1,52 @@
+//////////////////////////////////////////////////////////
+// "A Vertex Program for Efficient Box-Plane Intersection"
+// Christof Rezk Salama and Andreas Kolb
+// VMV 2005 Erlangen, Germany, November 16–18, 2005
+// Not used at present !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//////////////////////////////////////////////////////////
+
+void 
+main(int2 Vin : POSITION,
+     // updated per cube
+     uniform float3 vecTranslate,
+     uniform float dPlaneStart,
+
+     // updated per frame
+     uniform float4x4 matModelViewProj,
+     uniform float3 vecView,
+     uniform int frontIndex,
+     
+     // const: never updated
+     uniform float dPlaneIncr,
+     uniform int nSequence[64],
+     uniform float3 vecVertices[8],
+     uniform int v1[24],
+     uniform int v2[24],
+     
+     // output variables
+     out float4 VertexOut : POSITION,
+     out half3 TexCoordOut : TEXCOORD0) 
+{
+  float dPlaneDist = dPlaneStart + Vin.y * dPlaneIncr;
+  float3 Position;
+
+  for(int e=0; e<4; ++e) {
+    int vidx1 = nSequence[int(frontIndex * 8 + v1[Vin.x*4+e])];
+    int vidx2 = nSequence[int(frontIndex * 8 + v2[Vin.x*4+e])];
+    float3 vecV1 = vecVertices[vidx1];
+    float3 vecV2 = vecVertices[vidx2];
+    float3 vecStart = vecV1+vecTranslate;
+    float3 vecDir = vecV2-vecV1;
+    float denom = dot(vecDir,vecView);
+    float lambda = (denom!=0.0)? (dPlaneDist-dot(vecStart,vecView))/denom : -1.0;
+
+    if((lambda >= 0.0) && (lambda <= 1.0)) {
+      Position = vecStart + lambda * vecDir;
+      break;
+    } // if(...
+  } // for(...
+
+  VertexOut = mul(matModelViewProj, float4(Position,1.0));
+  TexCoordOut = 0.5 * (Position) + 0.5.xxx;
+  return;
+}

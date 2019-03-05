@@ -1,0 +1,495 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GEOMETRY_DIALOG DIALOGEX 0, 0, 288, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,255,127,26,14
+    PUSHBUTTON      "Cancel",IDCANCEL,255,144,26,14
+    GROUPBOX        "Beam Geometry",IDC_STATIC,7,7,156,81
+    LTEXT           "Source-Sample distance [m]",IDC_STATIC,11,49,96,8
+    LTEXT           "Source-Detector distance [m]",IDC_STATIC,11,68,95,8
+    EDITTEXT        IDC_EDIT_SSD,111,46,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SDD,111,65,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Detector Geometry",IDC_STATIC,7,94,156,64
+    LTEXT           "Horizzontal Field of View [mm]",IDC_STATIC,11,119,96,8
+    LTEXT           "Vertical Field of View [mm]",IDC_STATIC,11,139,96,8
+    EDITTEXT        IDC_EDIT_FOV_WIDTH,111,116,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FOV_HEIGHT,111,136,40,14,ES_AUTOHSCROLL
+    CONTROL         "Parallel",IDC_PARALLEL_BEAM,"Button",BS_AUTORADIOBUTTON,14,22,39,10
+    CONTROL         "Cone",IDC_CONE_BEAM,"Button",BS_AUTORADIOBUTTON,66,22,33,10
+    GROUPBOX        "Volume Size [Pixels]",IDC_STATIC,170,7,111,81
+    LTEXT           "X-Size",IDC_STATIC,189,31,20,8
+    LTEXT           "Y-Size",IDC_STATIC,189,49,20,8
+    LTEXT           "Z-Size",IDC_STATIC,189,67,20,8
+    EDITTEXT        IDC_EDIT_VOL_X_SIZE,217,28,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VOL_Y_SIZE,217,47,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VOL_Z_SIZE,217,64,40,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_GEOMETRY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Italian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NeuTomo"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "NeuTomo Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_NEUTOMO_DIALOG DIALOGEX 0, 0, 321, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Neutron Tomography"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Exit",IDCANCEL,261,25,50,16
+    PUSHBUTTON      "Preprocess",IDC_PREPROCESS,7,7,50,16
+    PUSHBUTTON      "Do Tomo",IDC_DOTOMO,7,30,50,16
+    EDITTEXT        IDC_STATUSMSG,1,187,318,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Show Slices",IDC_SHOW_SLICES,7,53,50,16
+    PUSHBUTTON      "New Phantom",IDC_MAKE_PHANTOM,7,76,50,16
+    PUSHBUTTON      "3D Show",IDC_3DSHOW,7,99,50,16
+END
+
+IDD_ROIDLG DIALOGEX 0, 0, 227, 105
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Make a Selection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Done",IDOK,35,84,27,14
+    PUSHBUTTON      "Cancel",IDCANCEL,100,84,27,14,BS_CENTER | BS_VCENTER
+    CTEXT           "XMin",IDC_STATIC,9,11,18,8,SS_CENTERIMAGE
+    CTEXT           "XMax",IDC_STATIC,9,27,18,8,SS_CENTERIMAGE
+    LTEXT           "YMin",IDC_STATIC,9,43,18,8
+    CTEXT           "YMax",IDC_STATIC,9,60,18,8
+    EDITTEXT        IDC_XMIN,31,8,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XMAX,31,24,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YMIN,31,40,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YMAX,31,57,73,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Apply",IDC_APPLY,161,84,27,14
+    EDITTEXT        IDC_MEANVAL,116,24,73,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Mean Value",IDC_STATIC,116,8,73,14,SS_CENTERIMAGE
+    CTEXT           "Std. Deviation",IDC_STATIC,115,40,73,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_SIGMA,116,57,73,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_SET_INTERVAL_DIALOG DIALOGEX 0, 0, 149, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Accept",IDOK,7,61,27,14
+    PUSHBUTTON      "Cancel",IDCANCEL,115,61,27,14
+    CTEXT           "XMin",IDC_STATIC,8,10,18,8,SS_CENTERIMAGE
+    CTEXT           "XMax",IDC_STATIC,9,31,18,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_XMIN,30,7,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XMAX,31,28,73,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Check",IDC_CHECK,61,61,27,14
+END
+
+IDD_PREPROCESS_DIALOG DIALOGEX 0, 0, 424, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Projections Pre Processing"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DARKDIR,20,33,263,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_BEAMDIR,20,64,263,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROJDIR,20,95,263,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_NORMDIR,20,126,263,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_CHANGEDARKDIR,283,33,13,12
+    PUSHBUTTON      "...",IDC_CHANGEBEAMDIR,283,64,13,12
+    PUSHBUTTON      "...",IDC_CHANGEPROJDIR,283,95,13,12
+    PUSHBUTTON      "...",IDC_CHANGENORMDIR,283,126,13,12
+    CONTROL         "Median Filter",IDC_FILTER_DARK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,301,34,54,11
+    CONTROL         "Median Filter",IDC_FILTER_BEAM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,301,65,54,11
+    CONTROL         "Use",IDC_USEDARK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,362,35,28,10
+    CONTROL         "Use",IDC_USEBEAM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,362,66,28,10
+    CONTROL         "Pre [Median]",IDC_PREMEDIAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,185,57,10
+    CONTROL         "Post [Median]",IDC_POSTMEDAIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,203,60,10
+    CONTROL         "Post [Gaussian]",IDC_POSTGAUSSIAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,221,66,10
+    EDITTEXT        IDC_POST_THRESHOLD,93,202,50,12,ES_AUTOHSCROLL
+    CONTROL         "Correct",IDC_ANDOR_BUG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,214,183,40,10
+    DEFPUSHBUTTON   "OK",IDOK,363,167,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,363,184,50,14
+    GROUPBOX        "Working Directories",IDC_STATIC,7,7,408,146
+    GROUPBOX        "Output Projections Filtering",IDC_STATIC,7,158,178,86
+    EDITTEXT        IDC_ANGULARSTEP,355,95,33,12,ES_AUTOHSCROLL
+    LTEXT           "Angular Step°",IDC_STATIC,301,97,48,9
+    LTEXT           "Threshold",IDC_STATIC,148,204,32,8,SS_CENTERIMAGE
+    GROUPBOX        "Dark Images",IDC_STATIC,15,23,378,29
+    GROUPBOX        "Open Beam Images",IDC_STATIC,15,54,378,29
+    GROUPBOX        "Projection Images",IDC_STATIC,15,84,378,29
+    GROUPBOX        "Normalized Projections Output",IDC_STATIC,15,115,378,29
+    GROUPBOX        "Andor Bug",IDC_STATIC,201,158,65,51
+END
+
+IDD_DOTOMO_DIALOG DIALOGEX 0, 0, 342, 154
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tomographic Reconstruction Parameters"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,307,114,26,14
+    PUSHBUTTON      "Cancel",IDCANCEL,307,131,26,14
+    EDITTEXT        IDC_NORMDIR,20,34,290,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Input Normalized Projections",IDC_STATIC,20,22,92,8
+    GROUPBOX        "Working Directories",IDC_STATIC,7,8,326,80
+    PUSHBUTTON      "...",IDC_CHANGENORMDIR,314,34,13,12
+    EDITTEXT        IDC_SLICEDIR,20,64,290,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Output Slices",IDC_STATIC,20,52,43,8
+    PUSHBUTTON      "...",IDC_CHANGESLICEDIR,314,64,13,12
+    GROUPBOX        "Filter Sinograms",IDC_STATIC,79,93,65,51
+    CONTROL         "Median",IDC_FILTER_SINOGRAMS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,94,118,39,10
+    GROUPBOX        "Projection Filter",IDC_STATIC,7,93,65,51
+    CONTROL         "Shepp-Logan",IDC_SHEPP_LOGAN,"Button",BS_AUTORADIOBUTTON,12,111,58,10
+    CONTROL         "Ram-Lak",IDC_RAM_LAK,"Button",BS_AUTORADIOBUTTON,12,126,43,10
+    GROUPBOX        "Beam and Detector Geometry",IDC_STATIC,152,93,106,51
+    PUSHBUTTON      "Set",IDC_SET_GEOMETRY,187,115,32,14
+END
+
+IDD_SHOWSLICES_DIALOG DIALOGEX 0, 0, 530, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Slices Show"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,473,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,473,24,50,14
+    EDITTEXT        IDC_NORMDIR,20,34,263,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Input Directory",IDC_STATIC,20,22,50,8
+    GROUPBOX        "Select Directory",IDC_STATIC,7,8,326,61
+    PUSHBUTTON      "...",IDC_CHANGESHOWDIR,283,34,13,12
+END
+
+IDD_SLICESPROJECTION_DIALOG DIALOGEX 0, 0, 194, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Build New Phantom"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Done",IDOK,137,7,50,16
+    PUSHBUTTON      "Open File",IDC_OPEN_FILE,7,7,50,16
+    CONTROL         "",IDC_PROGRESS_CALCULATE,"msctls_progress32",WS_BORDER,7,65,180,14
+    LTEXT           "Number of images",IDC_STATIC,7,30,54,8,SS_PATHELLIPSIS
+    LTEXT           "Images Width",IDC_STATIC,70,30,54,8,SS_PATHELLIPSIS
+    EDITTEXT        IDC_WIDTH_IMG,70,43,54,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Images Height",IDC_STATIC,133,30,54,8,SS_PATHELLIPSIS
+    EDITTEXT        IDC_N_IMG,7,43,54,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_HEIGHT_IMG,133,43,54,12,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_PLAYCNTL_DIALOG DIALOGEX 0, 0, 148, 52
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Play Control"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Play",IDC_PLAY,7,19,32,17,BS_BITMAP
+    PUSHBUTTON      "Fwd",IDC_NEXT,109,19,32,17,BS_BITMAP
+    PUSHBUTTON      "Back",IDC_PREV,75,19,32,17,BS_BITMAP
+    PUSHBUTTON      "Stop",IDC_STOP,41,19,32,17,BS_BITMAP
+END
+
+IDD_3DTOOLS_DIALOG DIALOGEX 0, 0, 241, 107
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "3D Tools"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_INTENSITY,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,19,40,20,59
+    LTEXT           "Isovalue",IDC_STATIC,14,33,28,8
+    CONTROL         "Show Frame",IDC_SHOW_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,178,60,55,10
+    GROUPBOX        "Surface Colour",IDC_STATIC,49,17,121,83,BS_CENTER
+    CONTROL         "",IDC_RED,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,59,40,20,59
+    LTEXT           "Red",IDC_STATIC,60,33,14,8
+    CONTROL         "",IDC_GREEN,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,98,40,20,59
+    LTEXT           "Green",IDC_STATIC,96,33,20,8
+    CONTROL         "",IDC_BLUE,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,142,40,20,59
+    LTEXT           "Blue",IDC_STATIC,142,33,14,8
+END
+
+IDD_CENTER_DIALOG DIALOGEX 0, 0, 203, 85
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,168,64,28,14
+    PUSHBUTTON      "Annulla",IDCANCEL,113,64,28,14,WS_DISABLED
+    PUSHBUTTON      "Left",IDC_LEFT,15,37,22,14,WS_DISABLED
+    PUSHBUTTON      "Right",IDC_RIGHT,65,37,22,14,WS_DISABLED
+    PUSHBUTTON      "CCW",IDC_CCW,40,23,22,14,WS_DISABLED
+    PUSHBUTTON      "CW",IDC_CW,39,52,22,14,WS_DISABLED
+    GROUPBOX        "Move Center",IDC_STATIC,7,7,86,71,BS_CENTER
+    EDITTEXT        IDC_CENTER_POS,107,21,46,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_TILT_ANGLE,107,38,46,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Center",IDC_STATIC,159,22,25,9
+    LTEXT           "Tilt Angle",IDC_STATIC,159,40,30,8
+    GROUPBOX        "Center Position",IDC_STATIC,98,8,98,48,BS_CENTER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+    END
+
+    IDD_NEUTOMO_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_ROIDLG, DIALOG
+    BEGIN
+    END
+
+    IDD_SET_INTERVAL_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_PREPROCESS_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_DOTOMO_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_SHOWSLICES_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_SLICESPROJECTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_PLAYCNTL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_3DTOOLS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_CENTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        BOTTOMMARGIN, 78
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)\r\n"
+    "LANGUAGE 16, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\NeuTomo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NeuTomo.ico"
+IDI_GRABBERICO          ICON                    "res\\GrabbeWnd.ico"
+IDI_ICONMSG             ICON                    "res\\iconMsg.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,3
+ PRODUCTVERSION 1,0,0,3
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Gabriele Salvato - IPCF CNR Messina"
+            VALUE "FileDescription", "Tomography Reconstruction"
+            VALUE "FileVersion", "1.0.0.3"
+            VALUE "InternalName", "NeuTomo.exe"
+            VALUE "LegalCopyright", "(c) Gabriele Salvato.  All rights reserved."
+            VALUE "OriginalFilename", "NeuTomo.exe"
+            VALUE "ProductName", "NeuTomo"
+            VALUE "ProductVersion", "1.0.0.3"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_SELECTION           CURSOR                  "res\\selection.cur"
+IDC_MYCROSS             CURSOR                  "res\\mycross.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGOIPCF            BITMAP                  "..\\NeuTomo\\res\\logoIPCF.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About NeuTomo..."
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+LANGUAGE 16, 1
+#pragma code_page(1252)
+#include "res\NeuTomo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

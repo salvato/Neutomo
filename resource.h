@@ -1,0 +1,125 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by NeuTomo.rc
+//
+#define IDM_ABOUTBOX                    0x0010
+#define IDD_ABOUTBOX                    100
+#define IDS_ABOUTBOX                    101
+#define IDD_NEUTOMO_DIALOG              102
+#define IDR_MAINFRAME                   128
+#define IDI_GRABBERICO                  129
+#define IDC_SELECTION                   130
+#define IDC_MYCROSS                     131
+#define IDD_ROIDLG                      132
+#define IDD_SET_INTERVAL_DIALOG         133
+#define IDI_ICONMSG                     134
+#define IDD_PREPROCESS_DIALOG           135
+#define IDD_SHOWSLICES_DIALOG           136
+#define IDD_DOTOMO_DIALOG               137
+#define IDD_SLICESPROJECTION_DIALOG     138
+#define IDD_PLAYCNTL_DIALOG             139
+#define IDD_3DTOOLS_DIALOG              140
+#define IDB_LOGOIPCF                    141
+#define IDB_PLAY                        142
+#define IDB_BITMAP1                     143
+#define IDB_PLAYDN                      143
+#define IDD_CENTER_DIALOG               148
+#define IDD_GEOMETRY_DIALOG             149
+#define IDC_PREPROCESS                  1000
+#define IDC_OPEN_FILE                   1000
+#define IDC_DOTOMO                      1001
+#define IDC_CHECK                       1001
+#define IDC_PROGRESS_CALCULATE          1001
+#define IDC_DARKDIR                     1002
+#define IDC_N_IMG                       1002
+#define IDC_BEAMDIR                     1003
+#define IDC_WIDTH_IMG                   1003
+#define IDC_PROJDIR                     1004
+#define IDC_NORMDIR                     1005
+#define IDC_APPLY                       1006
+#define IDC_USEDARK                     1006
+#define IDC_SLICEDIR                    1006
+#define IDC_HEIGHT_IMG                  1006
+#define IDC_F_BMP                       1007
+#define IDC_F_MBPM                      1008
+#define IDC_MEANVAL                     1008
+#define IDC_F_PSI                       1008
+#define IDC_F_BINARY                    1009
+#define IDC_SIGMA                       1009
+#define IDC_F_HBINARY                   1010
+#define IDC_F_JPEG                      1011
+#define IDC_XMIN                        1011
+#define IDC_XMAX                        1012
+#define IDC_CHANGEBEAMDIR               1012
+#define IDC_YMIN                        1013
+#define IDC_CHANGEPROJDIR               1013
+#define IDC_YMAX                        1014
+#define IDC_CHANGENORMDIR               1014
+#define IDC_ROWS                        1015
+#define IDC_CHANGESLICEDIR              1015
+#define IDC_COLUMNS                     1016
+#define IDC_USEBEAM                     1017
+#define IDC_PREMEDIAN                   1019
+#define IDC_POSTMEDAIN                  1020
+#define IDC_POSTGAUSSIAN                1021
+#define IDC_STATUSMSG                   1021
+#define IDC_ANGULARSTEP                 1025
+#define IDC_ANGLEINFILENAME             1026
+#define IDC_ANGLEINFILENAME2            1027
+#define IDC_ANGLEINFILENUMBER           1027
+#define IDC_SHOW_SLICES                 1027
+#define IDC_CHANGESHOWDIR               1028
+#define IDC_MAKE_PHANTOM                1029
+#define IDC_STOP                        1029
+#define IDC_3DSHOW                      1030
+#define IDC_PLAY2                       1030
+#define IDC_DENSITY                     1031
+#define IDC_NEXT                        1031
+#define IDC_INTENSITY                   1032
+#define IDC_PREV                        1032
+#define IDC_SLICESNUMBER                1033
+#define IDC_COLOR_TEXTURE               1034
+#define IDC_RED                         1034
+#define IDC_SHOW_FRAME                  1035
+#define IDC_POST_THRESHOLD              1036
+#define IDC_GREEN                       1036
+#define IDC_FILTER_BEAM                 1037
+#define IDC_FILTER_SINOGRAMS            1038
+#define IDC_FILTER_DARK                 1039
+#define IDC_BLUE                        1039
+#define IDC_SHEEP_LOGAN                 1040
+#define IDC_SHEPP_LOGAN                 1040
+#define IDC_RAM_LAK                     1041
+#define IDC_POINT2EXCLUDE               1042
+#define IDC_POINTS2EXCLUDE              1042
+#define IDC_PLAY                        1042
+#define IDC_ANDOR_BUG                   1043
+#define IDC_LEFT                        1045
+#define IDC_RIGHT                       1046
+#define IDC_CCW                         1047
+#define IDC_CW                          1048
+#define IDC_CENTER_POS                  1049
+#define IDC_TILT_ANGLE                  1050
+#define IDC_PARALLEL_BEAM               1051
+#define IDC_CONE_BEAM                   1052
+#define IDC_SET_GEOMETRY                1053
+#define IDC_EDIT_SSD                    1055
+#define IDC_EDIT_SDD                    1056
+#define IDC_EDIT_FOV_WIDTH              1057
+#define IDC_EDIT_FOV_HEIGHT             1058
+#define IDC_SPIN2                       1058
+#define IDC_EDIT_VOL_X_SIZE             1059
+#define IDC_EDIT_VOL_Y_SIZE             1060
+#define IDC_EDIT_VOL_Z_SIZE             1061
+#define IDC_CHANGEDARKDIR               1091
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        150
+#define _APS_NEXT_COMMAND_VALUE         32771
+#define _APS_NEXT_CONTROL_VALUE         1059
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

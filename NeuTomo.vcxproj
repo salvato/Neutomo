@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7E096FD-AFA3-49C6-B5E2-26717DCA8E71}</ProjectGuid>
+    <RootNamespace>NeuTomo</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include;..\Plot3\Plot3 Distribution;..\cximage600\CxImage;$(CG_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>lib;$(CG_LIB_PATH);..\Plot3\Plot3 Distribution;..\cximage600\CxImage\CxImageDLL\Unicode_Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;..\Plot3\Plot3 Distribution;..\cximage600\CxImage;$(CG_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>lib;..\cximage600\CxImage\CxImageDLL\Unicode_Release;..\Plot3\Plot3 Distribution;$(CG_LIB_PATH);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="3DToolsDlg.cpp" />
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AlignWnd.cpp" />
+    <ClCompile Include="CenterDlg.cpp" />
+    <ClCompile Include="DoTomoDlg.cpp" />
+    <ClCompile Include="GeometryDlg.cpp" />
+    <ClCompile Include="GrabberWnd.cpp" />
+    <ClCompile Include="GrCamera.cpp" />
+    <ClCompile Include="MsgWindow.cpp" />
+    <ClCompile Include="NeuTomo.cpp" />
+    <ClCompile Include="NeuTomoDlg.cpp" />
+    <ClCompile Include="NeuTomoUtil.cpp" />
+    <ClCompile Include="OGLCtrl.cpp" />
+    <ClCompile Include="ParallelTomoThread.cpp" />
+    <ClCompile Include="PlayCntlDlg.cpp" />
+    <ClCompile Include="Point2f.cpp" />
+    <ClCompile Include="PreProcessDlg.cpp" />
+    <ClCompile Include="Projection.cpp" />
+    <ClCompile Include="RoiDlg.cpp" />
+    <ClCompile Include="SelectShowDirDlg.cpp" />
+    <ClCompile Include="ShowVolWnd.cpp" />
+    <ClCompile Include="Slices ProjectionDlg.cpp" />
+    <ClCompile Include="SliceThread.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TomoProjection.cpp" />
+    <ClCompile Include="VolumeWnd.cpp" />
+    <ClCompile Include="WindowTip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3DToolsDlg.h" />
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AlignWnd.h" />
+    <ClInclude Include="CenterDlg.h" />
+    <ClInclude Include="DoTomoDlg.h" />
+    <ClInclude Include="fitsio.h" />
+    <ClInclude Include="GeometryDlg.h" />
+    <ClInclude Include="GrabberWnd.h" />
+    <ClInclude Include="GrCamera.h" />
+    <ClInclude Include="longnam.h" />
+    <ClInclude Include="MsgWindow.h" />
+    <ClInclude Include="NeuTomo.h" />
+    <ClInclude Include="NeuTomoDlg.h" />
+    <ClInclude Include="NeuTomoUtil.h" />
+    <ClInclude Include="OGLCtrl.h" />
+    <ClInclude Include="ParallelTomoThread.h" />
+    <ClInclude Include="PlayCntlDlg.h" />
+    <ClInclude Include="Point2f.h" />
+    <ClInclude Include="PreProcessDlg.h" />
+    <ClInclude Include="Projection.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RoiDlg.h" />
+    <ClInclude Include="SelectShowDirDlg.h" />
+    <ClInclude Include="ShowVolWnd.h" />
+    <ClInclude Include="Slices ProjectionDlg.h" />
+    <ClInclude Include="SliceThread.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TomoProjection.h" />
+    <ClInclude Include="VolumeWnd.h" />
+    <ClInclude Include="WindowTip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\GrabbeWnd.ico" />
+    <None Include="res\iconMsg.ico" />
+    <None Include="res\logoIPCF.bmp" />
+    <None Include="res\mycross.cur" />
+    <None Include="res\NeuTomo.ico" />
+    <None Include="res\NeuTomo.rc2" />
+    <None Include="res\PlayDn.bmp" />
+    <None Include="res\PlayF.bmp" />
+    <None Include="res\PlayUp.bmp" />
+    <None Include="res\PlayX.bmp" />
+    <None Include="res\selection.cur" />
+    <CustomBuildStep Include="Ellissoidi.d">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Shepp-Logan.d">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <None Include="ConeBeam.cg" />
+    <None Include="projTex.cg" />
+    <None Include="ReadMe.txt" />
+    <None Include="ViewAlignSlice.cg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NeuTomo.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="NeuTomo.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

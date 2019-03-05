@@ -1,0 +1,7 @@
+float4
+projTex(in float2 coords : TEXCOORD0,
+        uniform samplerRECT newTexture,
+        uniform samplerRECT oldTexture): COLOR
+{
+  return texRECT(oldTexture, coords)+texRECT(newTexture, coords);
+}
